@@ -21,7 +21,7 @@ public class PageController {
 		
 		ModelAndView mv = new ModelAndView("index");
 //		mv.addObject("greeting", "Welcome to Law Exam Preparation!!");
-		
+			
 		return mv;
 	}
 	
