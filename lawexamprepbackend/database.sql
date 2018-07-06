@@ -7,12 +7,10 @@ CREATE TABLE users (
   password varchar(255) NOT NULL,
   role VARCHAR(50),
   isactive tinyint(1) NOT NULL DEFAULT 1,
-  lastlogindate timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  createdby int(11) DEFAULT NULL,
-  modifiedby int(11) DEFAULT NULL,
-  passwordattemp int(11) DEFAULT '0',
   PRIMARY KEY (id)
 );
+
+insert into users(username, password, role, isactive) values ('amrinder','amrinder', 'admin', 1)
 
 CREATE TABLE userprofile (
   id int(11) NOT NULL AUTO_INCREMENT,
