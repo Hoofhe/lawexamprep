@@ -30,7 +30,8 @@
 	<nav class="nav-section">
 		<div class="container">
 			<div class="nav-right ">
-				<a href="#" data-toggle="modal" data-target="#popUpWindow">Login</a>				
+				<a href="${contextRoot}/register">Sign Up</a>
+				<a href="${contextRoot}/login">Login</a>				
 			</div>
 			<ul class="main-menu">
 				<li class="active"><a href="${contextRoot}/home">Home</a></li>

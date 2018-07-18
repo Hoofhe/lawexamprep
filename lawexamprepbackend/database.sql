@@ -2,31 +2,30 @@ CREATE DATABASE lawexamprep_db;
 USE lawexamprep_db;
 
 CREATE TABLE users (
-  id int(11) NOT NULL AUTO_INCREMENT,
-  username varchar(255) NOT NULL,
-  password varchar(255) NOT NULL,
-  role VARCHAR(50),
-  isactive tinyint(1) NOT NULL DEFAULT 1,
-  PRIMARY KEY (id)
+	id int(11) NOT NULL AUTO_INCREMENT,
+	firstname VARCHAR(50) NOT NULL,
+	lastname VARCHAR(50) NOT NULL,
+	role VARCHAR(50),
+	enabled BOOLEAN,
+	password VARCHAR(60) NOT NULL,
+	email VARCHAR(100),
+	contact_number VARCHAR(15),	
+	PRIMARY KEY (id)
 );
 
-insert into users(username, password, role, isactive) values ('amrinder','amrinder', 'admin', 1)
-
-CREATE TABLE userprofile (
-  id int(11) NOT NULL AUTO_INCREMENT,
-  userid int(11) NOT NULL,
-  firstname varchar(255) NOT NULL,
-  middlename varchar(255) NOT NULL,
-  lastname varchar(255) NOT NULL,
-  addressline1 varchar(255) NOT NULL,
-  addressline2 varchar(255) NOT NULL,
-  city varchar(255) NOT NULL,
-  province varchar(255) NOT NULL,
-  postalcode varchar(255) NOT NULL,
-  country varchar(255) NOT NULL,
-  PRIMARY KEY (id),
-  KEY userid (userid),
-  CONSTRAINT userprofile_ibfk_1 FOREIGN KEY (userid) REFERENCES users (id)
+CREATE TABLE address (
+	id int(11) NOT NULL AUTO_INCREMENT,
+	userid int,
+	address_line_one VARCHAR(100) NOT NULL,
+	address_line_two VARCHAR(100) NOT NULL,
+	city VARCHAR(20) NOT NULL,
+	state VARCHAR(20) NOT NULL,
+	country VARCHAR(20) NOT NULL,
+	province varchar(255) NOT NULL,
+	postal_code VARCHAR(10) NOT NULL,
+	is_billing BOOLEAN,
+	CONSTRAINT fk_address_user_id FOREIGN KEY (userid ) REFERENCES users (id),
+	PRIMARY KEY (id)
 );
 
 CREATE TABLE papertype (

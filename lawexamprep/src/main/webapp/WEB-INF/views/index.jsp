@@ -211,15 +211,15 @@
 	</section>
 	<!-- Enroll section end -->
 
-	<div class="modal fade" id="popUpWindow">
+	<!-- <div class="modal fade" id="popUpWindow">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<!-- header -->
+				header
 				<div class="modal-header">
 					<h4 class="modal-title">Login</h4>
 					<button type="button" class="close" data-dismiss="modal">&times;</button>					
 				</div>
-				<!-- body -->
+				body
 				<div class="modal-body">
 					<form role="form">
 						<div class="form-group col-md-9 mx-auto">
@@ -240,7 +240,7 @@
 			
 			</div>
 		</div>
-	</div>
+	</div> -->
 	
 	<section class="contact-page spad pt-0" id="contact">
 	<div class="container">

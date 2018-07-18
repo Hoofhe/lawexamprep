@@ -21,7 +21,7 @@ public class HibernateConfig {
 	private final static String DATABASE_URL = "jdbc:mysql://localhost:3306/lawexamprep_db";
 	private final static String DATABASE_DRIVER = "com.mysql.jdbc.Driver";
 	private final static String DATABASE_DIALECT = "org.hibernate.dialect.MySQLDialect";
-	private final static String DATABASE_USERNAME = "root";
+	private final static String DATABASE_USERNAME = "root1";
 	private final static String DATABASE_PASSWORD = "root";
 	
 	// DataSource bean will be available
@@ -62,7 +62,7 @@ public class HibernateConfig {
 		properties.put("hibernate.show_sql", "true");
 		properties.put("hibernate.format_sql", "true");
 		
-		//properties.put("hibernate.hbm2ddl.auto", "create");
+//		properties.put("hibernate.hbm2ddl.auto", "create");
 		return properties;
 	}
 	
